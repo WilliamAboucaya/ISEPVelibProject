@@ -1,4 +1,4 @@
-# theisepsvelibproject
+# ISEPVelibProject
 
 ## Génération de la base de données (avec MySQL Workbench) :
 

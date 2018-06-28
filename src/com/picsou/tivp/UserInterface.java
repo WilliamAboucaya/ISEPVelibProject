@@ -93,7 +93,13 @@ public class UserInterface extends BasicGame {
         System.out.println("Loading simulation at " + mainFormat.format(currentTimestamp));
     }
 
-
+    /**
+     * Randomly improves {@link Trip} according to the percentage of users accepting to get redirected, then updates the number of bikes of the involved stations
+     *
+     * @param gameContainer
+     * @param i
+     * @throws SlickException
+     */
     @Override
     public void update(GameContainer gameContainer, int i) throws SlickException {
         manageInputs(gameContainer.getInput());

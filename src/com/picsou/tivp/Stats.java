@@ -360,6 +360,11 @@ public class Stats {
         drawLegend(graphics);
     }
 
+    /**
+     * Draws the color code of the stations and state distribution
+     *
+     * @param graphics the graphical container in which the infos will be drawn
+     */
     public void drawLegend(Graphics graphics) {
         float x = 10;
         float y = 500;

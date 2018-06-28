@@ -175,8 +175,12 @@ public class City {
         }
     }
 
-
-
+    /**
+     * Adds a bike to the station whose ID is inputted or to the closest not full station if the first one can't
+     *
+     * @param stationId the ID of the {@link Station} we want to add a {@link Bike}
+     * @return
+     */
     public boolean addBikeInStation(int stationId) {
         Station currentStation = stations.get(stationId);
 
@@ -206,8 +210,11 @@ public class City {
         return true;
     }
 
-
-
+    /**
+     * Computes the number of empty, almost empty, balanced, almost full and full {@link Station} and triggers the update of the {@link Stats} object
+     *
+     * @param currentTimestamp
+     */
     public void addStats(long currentTimestamp) {
 
         int onStationBikeAmount = 0;
@@ -457,20 +464,6 @@ public class City {
 
         return points;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

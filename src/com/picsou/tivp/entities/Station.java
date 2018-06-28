@@ -250,6 +250,10 @@ public class Station {
 
     }
 
+    /**
+     *
+     * @return the percentage of bike places occupied
+     */
     public float getFillPercentage() {
         return (getBikeAmount() / (float) totalPlaces) * 100f;
     }

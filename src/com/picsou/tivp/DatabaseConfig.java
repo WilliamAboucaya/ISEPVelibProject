@@ -16,6 +16,10 @@ public class DatabaseConfig {
     public static final String DB_USER = "root";
     public static final String DB_PASSWD = "password";
 
+    /**
+     *
+     * @return the established connection to the database
+     */
     public Connection getConnection()  {
         try {
 //            Driver driver = (Driver) Class.forName(DB_DRIVER).newInstance();
@@ -53,7 +57,11 @@ public class DatabaseConfig {
         return resultSet;
     }
 
-
+    /**
+     * Reads the stationsadresses datatable and transforms each line into a {@link Station}
+     *
+     * @return the list of stations
+     */
     public List<Station> getParisStation() {
         ResultSet stationsQuery = fetch("SELECT * FROM stationsadresses WHERE ststate_state = 'open'");
         if (stationsQuery == null) {
@@ -92,7 +100,11 @@ public class DatabaseConfig {
         return stations;
     }
 
-
+    /**
+     * Reads the trips datatble and transforms each line into a {@link Trip}
+     *
+     * @return the list of trips
+     */
     public List<Trip> getTrips() {
         ResultSet tripsQuery = fetch("SELECT * from trips where out_station | in_station != 0 and id not in (select nb from stationsadresses WHERE ststate_state = 'closed')");
         if (tripsQuery == null) {

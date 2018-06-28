@@ -1,4 +1,4 @@
-# theisepsvelibproject
+# ISEPVelibProject
 
 ## Génération de la base de données (avec MySQL Workbench) :
 
@@ -22,5 +22,8 @@ Ok ok ok ok ok ok <br>
 Idem pour le dossier slick/lib<br>
 <br>
 ###**Retours sur le code**
-Dans la class Main<br>
+Dans la classe DatabaseConfig :<br>
+Vérifiez que les valeurs des constantes DB_USER et DB_PASSWORD correspondent bien à ceux nécessaires pour accéder à la base de données, sinon modifiez les en conséquence
+
+Dans la class Main :<br>
 La flèche verte à droite > Run<br>
